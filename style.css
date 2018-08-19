@@ -1,0 +1,43 @@
+#puppyTitle{
+    font-family: 'Raleway', sans-serif;
+    background: lightpink;
+    padding-top: .5px;
+    padding-bottom: .5px;
+    padding-left: 20px;
+}
+
+#mainBody{
+    font-family: 'Raleway', sans-serif;
+}
+
+.instuctionsBody{
+    background: lightblue;
+    padding-top: .5px;
+    padding-bottom: .5px;
+    padding-left: 20px;
+}
+
+.numberMatch{
+    background: lightyellow;
+    padding-top: .5px;
+    padding-bottom: .5px;
+    padding-left: 20px;
+}
+
+.images{
+    background: lightcyan;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.pupImage{
+    padding-left: 100px;
+}
+
+.totalWin{
+    background: lightgreen;
+    padding-top: .5px;
+    padding-bottom: .5px;
+    padding-left: 20px;
+}
