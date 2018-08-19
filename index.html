@@ -21,10 +21,10 @@
     <div id="mainBody">
         <section class="instuctionsBody">
             <p>
-                <h3>Instructions blah blah blah </h3>
+                <h3>Instructions: </h3>
             </p>
             <p>
-                <h3>blah blah blah blah blah blah bllllaaaaaahhh</h3>
+                <h3>The computer is thinking of a number. It's your job to click on the different puppers to add their numbers up and match the number given. HOWEVER the values of the dogs are hidden, making this a game of chance! GOOD LUCK!</h3>
             </p>
         </section>
         <section class="numberMatch">
@@ -56,11 +56,11 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <script type="text/javascript">
-            var targetNumber = Math.round(Math.random() * 50) + 50;
+            var targetNumber = Math.round(Math.random() * 200) + 50;
             $("#numberMatchSpan").text(targetNumber);
             var counter = 0;
-            var numberOptions = [10, 11];
-            var increment = Math.round(Math.random() * 20);
+            var numberOptions = [10, 5, 3, 7];
+            var increment = Math.round(Math.random()*15);
             $(".images").on("click", function () {
                 counter += increment;
                 alert("Your new score is " + counter);
