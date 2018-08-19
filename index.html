@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,31 +11,69 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
+
 <body>
 
-    <header id = "puppyTitle"><h1>Puppy Points!</h1></header>
+    <header id="puppyTitle">
+        <h1>Puppy Points!</h1>
+    </header>
 
-<div id = "mainBody">
-    <section class = "instuctionsBody">
-        <p><h3>Instructions blah blah blah </h3></p>
-        <p><h3>blah blah blah blah blah blah bllllaaaaaahhh</h3></p>
-    </section>
-    <section class = "numberMatch">
-        <p><h2>Your Number To Match:</h2></p>
-    </section>
-    <section class = "images">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSugg-Vn_wWqpr_vWBpXTGXaxW225IK790_XiJHiuj_oykJ2L2zUw" class="pupImage" alt="spot">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuVeAjDndgigBGIaLv8qLoDYl4Z7ycwHrvaTHCe6pacyBFJH0onA" class="pupImage" alt="pompom">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb2qm2Hj4S6CH0bDnJ5b5_ZiswnoYMIl5OYe1mMaLxbET3XtLI4A" class="pupImage" alt="winded">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRDOeZEfGygj_a2apWMa7zSQUUPvI4C6gpWbIvio4izhQwXCiK" class="pupImage" alt="robber">
-    </section>
-    <section class = "totalWin">
-        <p><h2>Wins :D :</h2></p>
-        <p><h2>Losses :( :</h2></p>
-    </section>
-</div>
+    <div id="mainBody">
+        <section class="instuctionsBody">
+            <p>
+                <h3>Instructions blah blah blah </h3>
+            </p>
+            <p>
+                <h3>blah blah blah blah blah blah bllllaaaaaahhh</h3>
+            </p>
+        </section>
+        <section class="numberMatch">
+            <p>
+                <h2>Your Number To Match:</h2>
+            </p>
+            <span id="numberMatchSpan"></span>
+        </section>
+        <section class="images">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSugg-Vn_wWqpr_vWBpXTGXaxW225IK790_XiJHiuj_oykJ2L2zUw" class="spotPup"
+                alt="spot">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuVeAjDndgigBGIaLv8qLoDYl4Z7ycwHrvaTHCe6pacyBFJH0onA" class="pomPup"
+                alt="pompom">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb2qm2Hj4S6CH0bDnJ5b5_ZiswnoYMIl5OYe1mMaLxbET3XtLI4A" class="windyPup"
+                alt="winded">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRDOeZEfGygj_a2apWMa7zSQUUPvI4C6gpWbIvio4izhQwXCiK" class="robberPup"
+                alt="robber">
+        </section>
+        <section class="totalWin">
+            <p>
+                <h2>Wins :D :</h2>
+            </p>
+            <p>
+                <h2>Losses :( :</h2>
+            </p>
+        </section>
+    </div>
+    <div id="mainFunctions">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-
+        <script type="text/javascript">
+            var targetNumber = Math.round(Math.random() * 50) + 50;
+            $("#numberMatchSpan").text(targetNumber);
+            var counter = 0;
+            var numberOptions = [10, 11];
+            var increment = Math.round(Math.random() * 20);
+            $(".images").on("click", function () {
+                counter += increment;
+                alert("Your new score is " + counter);
+                if (counter === targetNumber) {
+                    alert("You win!");
+                }
+                else if (counter > targetNumber) {
+                    alert("You lose!!");
+                }
+            });
+        </script>
+    </div>
 
 </body>
+
 </html>
